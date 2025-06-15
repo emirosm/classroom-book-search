@@ -2,14 +2,18 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Book } from '../types/Book';
-import styles from '../styles/components/BookCard.module.scss';
+import { Book } from '@/types/Book';
+import styles from '@/styles/components/BookCard.module.scss';
 
 export default function BookCard({ book }: { book: Book }) {
   const id = book.key.replace('/works/', '');
+  console.log("book",book);
   const cover = book.cover_i
-    ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+  ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+  : book.covers
+    ? `https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`
     : '/no-cover.png';
+
 
   return (
     <Link href={`/book/${id}`} className={styles.card}>

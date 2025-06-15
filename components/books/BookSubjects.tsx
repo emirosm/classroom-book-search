@@ -1,5 +1,5 @@
 import { BookDetail } from '@/types/Book';
-import styles from '../styles/components/BookSubjects.module.scss';
+import styles from '@/styles/components/BookSubjects.module.scss';
 
 export default function BookSubjects({ book }: { book: BookDetail }) {
   return (

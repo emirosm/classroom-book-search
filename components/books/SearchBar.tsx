@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../styles/components/SearchBar.module.scss';
+import styles from '@/styles/components/SearchBar.module.scss';
 
 interface Props {
   query: string;

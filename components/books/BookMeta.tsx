@@ -1,5 +1,5 @@
 import { BookDetail } from '@/types/Book';
-import styles from '../styles/components/BookMeta.module.scss';
+import styles from '@/styles/components/BookMeta.module.scss';
 
 export default function BookMeta({ book }: { book: BookDetail }) {
   const description =

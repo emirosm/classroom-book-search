@@ -1,5 +1,5 @@
 import { BookDetail } from '@/types/Book';
-import styles from '../styles/components/BookLinks.module.scss';
+import styles from '@/styles/components/BookLinks.module.scss';
 
 export default function BookLinks({ book }: { book: BookDetail }) {
   if (!book.links?.length) return null;

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/components/Navbar.module.scss';
+import styles from '@/styles/components/Navbar.module.scss';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import SearchBar from '@/components/SearchBar';
-import BookList from '@/components/BookList';
-import { useBookSearch } from '../hooks/useBookSearch';
+import SearchBar from '@/components/books/SearchBar';
+import BookList from '@/components/books/BookList';
+import { useBookSearch } from '@/hooks/useBookSearch';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
