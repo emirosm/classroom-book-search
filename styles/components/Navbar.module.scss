@@ -1,0 +1,93 @@
+@import '../variables';
+@import '../mixins';
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-white;
+  padding: $space-md $space-lg;
+  border-bottom: 1px solid #e2e8f0;
+
+  .logo {
+    font-weight: bold;
+    font-size: $font-lg;
+    color: $color-primary;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .bar {
+      width: 24px;
+      height: 2px;
+      background-color: $color-primary;
+      transition: 0.3s;
+    }
+
+    @include respond(md) {
+      display: flex;
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: $space-lg;
+    list-style: none;
+    transition: all 0.3s ease;
+
+    li a {
+      text-decoration: none;
+      color: $color-primary;
+      font-weight: 500;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    @include respond(md) {
+      position: absolute;
+      top: 70%;
+      left: 0;
+      right: 0;
+      background: $color-white;
+      border-top: 1px solid #e2e8f0;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &.show {
+      @include respond(md) {
+        max-height: 300px;
+        visibility: visible;
+        opacity: 1;
+        padding: $space-sm 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+      }
+    }
+
+    li {
+      padding: $space-sm $space-lg;
+
+      @include respond(md) {
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

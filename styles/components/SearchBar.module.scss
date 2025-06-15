@@ -1,0 +1,18 @@
+@import '../_variables';
+@import '../_mixins';
+
+.input {
+  width: 100%;
+  max-width: 500px;
+  padding: $space-sm $space-md;
+  font-size: $font-md;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  outline: none;
+  margin: $space-md 0;
+
+  &:focus {
+    border-color: $color-accent;
+    box-shadow: 0 0 0 1px $color-accent;
+  }
+}

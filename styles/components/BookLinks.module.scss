@@ -1,0 +1,22 @@
+@import '../variables';
+@import '../mixins';
+
+.links {
+  h2 {
+    font-size: $font-md;
+
+    @include respond(md) {
+      font-size: $font-lg;
+    }
+  }
+
+  ul {
+    li a {
+      font-size: $font-sm;
+
+      @include respond(md) {
+        font-size: $font-md;
+      }
+    }
+  }
+}

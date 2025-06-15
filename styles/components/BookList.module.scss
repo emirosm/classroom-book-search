@@ -1,0 +1,13 @@
+@import '../_variables';
+@import '../_mixins';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: $space-md;
+  margin-top: $space-md;
+
+  @include respond(sm) {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

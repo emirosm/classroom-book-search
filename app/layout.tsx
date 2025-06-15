@@ -1,11 +1,17 @@
+import Navbar from '@/components/Navbar';
 import ReactQueryProvider from '../components/ReactQueryProvider';
-import '../styles/globals.scss';
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import '../styles/_globals.scss';
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
         <ReactQueryProvider>
-          {children}
+          <Navbar />
+          <main style={{ padding: '2rem' }}>{children}</main>
         </ReactQueryProvider>
       </body>
     </html>

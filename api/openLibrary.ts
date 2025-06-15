@@ -1,10 +1,13 @@
 import axios from 'axios';
-import { Book } from '../types/Book';
+import { Book, BookDetail } from '../types/Book';
 
 export const searchBooks = async (query: string): Promise<Book[]> => {
-  const response = await axios.get('https://openlibrary.org/search.json', {
-    params: { q: query },
-  });
-
-  return response.data.docs.slice(0, 20); 
+  const res = await axios.get(`/api/books/search?q=${query}`);
+  return res.data;
 };
+
+export const fetchBookDetail = async (id: string): Promise<BookDetail> => {
+  const res = await axios.get(`/api/books/${id}`);
+  return res.data;
+};
+

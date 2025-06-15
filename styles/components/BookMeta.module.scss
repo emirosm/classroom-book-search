@@ -1,0 +1,33 @@
+@import '../variables';
+@import '../mixins';
+
+.meta {
+  h1 {
+    font-size: $font-lg;
+    margin-bottom: $space-sm;
+
+    @include respond(md) {
+      font-size: $font-xl;
+    }
+  }
+
+  p {
+    font-size: $font-sm;
+    max-width: 100%;
+
+    @include respond(md) {
+      font-size: $font-md;
+      max-width: 700px;
+    }
+  }
+
+  blockquote {
+    font-size: $font-sm;
+    padding-left: $space-md;
+
+    @include respond(md) {
+      font-size: $font-md;
+      padding-left: $space-lg;
+    }
+  }
+}

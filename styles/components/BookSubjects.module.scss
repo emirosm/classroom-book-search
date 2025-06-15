@@ -1,0 +1,20 @@
+@import '../variables';
+@import '../mixins';
+
+.subjects {
+  h2 {
+    font-size: $font-md;
+
+    @include respond(md) {
+      font-size: $font-lg;
+    }
+  }
+
+  p {
+    font-size: $font-sm;
+
+    @include respond(md) {
+      font-size: $font-md;
+    }
+  }
+}
