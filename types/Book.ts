@@ -28,3 +28,8 @@ export interface BookDetail {
     comment?: string;
   }[];
 }
+
+export interface BookSearchResponse {
+  books: Book[];
+  total: number;
+}
